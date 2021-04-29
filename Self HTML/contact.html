@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
    <title>Contact</title>
+   <link rel="shortcut icon" sizes="96x96" href="favicon_package_v0.16/favicon.png">
    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -24,7 +25,7 @@
     
    
 </head>
-<body id="user">
+<body>
 
 <!-- Navigation -->
 
@@ -40,24 +41,19 @@
          <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-               <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
+               <a class="nav-link nl" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="about.html">About</a>
+               <a class="nav-link nl" href="about.html">About</a>
             </li>
             <li class="nav-item ">
                <a class="nav-link active" href="#">Contact</a>
             </li>
             
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <a class="nav-link nl" href="account.html">
                Account
                </a>
-               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-               <a class="dropdown-item" href="#">User Profile</a>
-               <a class="dropdown-item" href="#">Go Pro</a>
-               <a class="dropdown-item" href="#">Logout</a>
-               </div>
             </li>
          </ul>
          </div>
@@ -66,52 +62,42 @@
 
 
 <!-- End of Navigation -->
-<div class="row no-gutters">
+
+<div class="row no-gutters page-start">
 
    <div class="col-md-6 no-gutters">
 
          <div class="leftside">                  
-                  <img class="contacts" src="SVGs/undraw_contact.svg" alt="contact">
-              
+                  <img class="contacts" src="SVGs/undraw_contact.svg" alt="contact">                  
          </div>
-
    </div>
 
-   <div class="col-md-6 no-gutters">
+      <div class="col-md-6 no-gutters">
 
-   <div class="contact-rightside">
-      
-      <div class="form6">
-         <h2 class="feedback" align="center">Feedback or Questions?</h2>
-      
-         <input  placeholder="First Name" class="form-control contact-input">  
-                                        
-         <input placeholder="Surname" class="form-control contact-input">
-      
-         <input placeholder="Your Email" class="form-control contact-input">                                       
-         
-         <textarea placeholder="Your Message" class="contact-input" name="" id="" cols="30" rows="7"></textarea>
-                         
-         <div>
-            <button class="btn7"> Send Message </button> 
+         <div class="contact-rightside">
+            
+               <form action="https://formsubmit.co/ayo.akore@gmail.com" method="POST">
+                  <div class="form6">
+                     <h2 class="feedback" align="center">Feedback or Questions?</h2>
+                  
+                     <input  placeholder="First Name" type="text" name="name" required class="form-control contact-input">  
+                                                   
+                     <input placeholder="Surname" type="text" name="name" class="form-control contact-input">
+                  
+                     <input placeholder="Your Email" type="email" name="email" required class="form-control contact-input">                                       
+                     
+                     <textarea placeholder="Your Message" class="contact-input" type="text" name="" required id="" cols="30" rows="7"></textarea>
+                                    
+                     <div>
+                        <button type="submit" class="btn7"> Send Message </button> 
+                     </div>
+
+                  </div>
+               </form>
          </div>
-
-
-</div>
       </div>
 
-   </div>
-
-</div>
-
-
-   </div>
-</div> 
-
-</div>
-    
-
-
+   </div>  
 
 
 <!-- firebase -->

@@ -6,6 +6,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
    <title>Home</title>
+
+   <link rel="shortcut icon" sizes="96x96" href="favicon_package_v0.16/favicon.png">
+   
    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -22,7 +25,7 @@
     
    
 </head>
-<body id="user">
+<body>
 
 <!-- Navigation -->
 
@@ -38,24 +41,24 @@
       <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
          <li class="nav-item">
-            <a class="nav-link active" href="home.html">Home <span class="sr-only"></span></a>
+            <a class="nav-link active" href="home.html">Home</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link nl" href="about.html">About</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link nl" href="contact.html">Contact</a>
          </li>
          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link nl" href="account.html">
             Account
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">User Profile</a>
-            <a class="dropdown-item" href="#">Go Pro</a>
-            <a class="dropdown-item" href="#">Logout</a>
-            </div>
          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">
+               <button class="btn8" onclick="">Go premium</button>
+            </a> 
+         </li> 
       </ul>
       </div>
    </nav>
@@ -64,14 +67,19 @@
 
 <!-- End of Navigation -->
 
-      <div class="row no-gutters">
+      <div class="row no-gutters page-load">
 
          <div class="col-md-6 no-gutters">
 
             
             <div class="home-leftside">
                <div class="form3">
-                  <h3 class="home-caption">IT'S UNCONVENTIONAL!</h3>
+                  <h3 class="home-caption">IT'S 
+                     <span
+                        class="txt-rotate"
+                        data-period="1500"
+                        data-rotate='[ "UNCONVENTIONAL!", "EDUCATIONAL!", "FUN!"]'></span>
+                  </h3>
                   <h3 class="home-intro">A Better Learning</h3>
                   <h3 class="home-intro">Experience Through Games</h3>
                   
@@ -88,7 +96,7 @@
          <div class="col-md-6 no-gutters">
 
          <div class="home-rightside">
-            <img class="friends" src="SVGs/undraw_mobile_testing_reah.svg" alt="friends hanging out">
+            <img class=" home-friends" src="SVGs/undraw_mobile_testing_reah.svg" alt="friends hanging out">
 
          </div>
 
@@ -102,6 +110,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
 <!-- JavaScript -->
 <script src="js/form.js"></script> 
+<script src="js/nerdy-pen.js"></script> 
 
 <!-- jQuery -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

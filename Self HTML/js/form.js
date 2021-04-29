@@ -22,10 +22,16 @@ function signUp() {
    var password = document.getElementById("password");
 
    const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
-   promise.catch(e => alert(e.message));
+   
+   promise
+      .then(() => {
 
-   alert("Registered");
+         alert("Successfully Registered");
+         window.location.href = "/Users/Ayo/Desktop/Self%20HTML/login.html";
 
+      })
+      
+      .catch(e => alert(e.message));
 }
 
 function signIn() {
@@ -34,28 +40,42 @@ function signIn() {
    var password = document.getElementById("password");
 
    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-   promise.catch(e => alert(e.message));
 
-   alert("Logged in " + email.value);
+   promise
+      .then(() => {
 
+         alert("Active user: " + email.value);
+         window.location.href = "/Users/Ayo/Desktop/Self%20HTML/home.html";
+
+         //alert("Logged in " + email.value);
+      })
+
+   .catch(e => alert(e.message));
 }
 
 function signOut() {
    auth.signOut();
-   alert("Logged out");
+   promise
+   .then(() => {
+
+      window.location.href = "/Users/Ayo/Desktop/Self%20HTML/login.html";
+
+      //alert("Logged in " + email.value);
+   })
 }
 
 firebase.auth().onAuthStateChanged(function (user) {
-   if (user) {
-      var email = user.email;
-     // alert("Active user: " + email);
-    //  window.location.href = "/Users/Ayo/Desktop/Self HTML/home.html";
-   }
-   else {
-      //alert("No active user");
-     //window.location.href = "/Users/Ayo/Desktop/Self HTML/login.html";
-
+   if (!user) {
+           
+      if (window.location.href.indexOf("login.html") == -1 && window.location.href.indexOf("register.html") == -1) {
+         window.location.href = "/Users/Ayo/Desktop/Self%20HTML/register.html";
+         window.location.href = "/Users/Ayo/Desktop/Self%20HTML/login.html";
+         
+        
+         //alert("Logged out");
+      }
+         
    }
 })
 
-  
+
